@@ -1,0 +1,218 @@
+@media (width >=591px) {
+    .filter_active-header {
+        display: none;
+    }
+
+    .filters-flex,
+    .cat-search-ico {
+        display: none;
+    }
+
+    .cat-container {
+        width: 17vw;
+        max-width: 225px;
+        min-width: 135px;
+        box-sizing: border-box;
+        position: fixed;
+        left: 5vw;
+        height: 200px;
+    }
+
+    .cat-contaienr_header {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .cat-search-input {
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+        font-size: calc(.9vw + 1vh);
+        outline: none;
+        border: 1px solid rgba(98, 98, 98, 0.191);
+        background-color: transparent;
+        margin-bottom: 10vh;
+    }
+
+    .cat-header {
+        font-size: 18px;
+    }
+
+    .cat-filter-pills-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .filter-pill {
+        background-color: white;
+        color: black;
+        border: 1px solid rgba(76, 76, 76, 0.754);
+        padding: 6px;
+        font-size: 14px;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: ease-in-out .2s;
+    }
+
+    .filter-pill.active {
+
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        border: 1px solid rgba(0, 0, 0, 0.754);
+        padding: 6px;
+        font-size: 14px;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: ease-in-out .2s;
+    }
+
+
+}
+
+@media (width <=590px) {
+
+    .cat-container {
+        width: 100%;
+        position: absolute;
+        top: 53.5px;
+        left: 0;
+
+    }
+
+    .cat-mobile-header {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-top: .7px solid rgba(11, 11, 11, 0.129);
+        border-bottom: .7px solid rgba(11, 11, 11, 0.129);
+        height: 40px;
+        align-items: center;
+        padding: 0 5vw;
+        box-sizing: border-box;
+        background-color: white;
+        gap: 10vw;
+    }
+
+    .cat-filters {
+        display: none;
+    }
+
+    .cat-filter-ico {
+        font-size: 18px;
+    }
+
+    .filters-flex {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        letter-spacing: .6px;
+    }
+
+    .cat-search-input {
+        width: 100%;
+        height: 38.9px;
+        padding: 10px;
+        font-size: 14px;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        border-left: 1px solid rgba(11, 11, 11, 0.129);
+    }
+
+    .cat-search-ico {
+        font-size: 40px;
+    }
+
+    .cat-filter-pills-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        margin-top: 15px;
+        width: 50vw;
+    }
+    .cat-filters{
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        height: 100%;
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        padding: 0 5vw;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        transition: ease-in-out .3s;
+    }
+
+    .cat-filters__active {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        height: 100%;
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0 5vw;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        transition: ease-in-out .3s;
+
+    }
+
+    .filter_active-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        margin-bottom: 10vh;
+    }
+
+    .filter-open-head {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .filter-open-close-btn {
+        font-size: 24px;
+    }
+
+    .cat-header {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .filter-pill {
+        background-color: white;
+        color: black;
+        border: 1px solid rgba(76, 76, 76, 0.754);
+        padding: 6px;
+        font-size: 14px;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: ease-in-out .2s;
+        width: fit-content;
+    }
+
+    .filter-pill.active {
+
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        border: 1px solid rgba(0, 0, 0, 0.754);
+        padding: 6px;
+        font-size: 14px;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: ease-in-out .2s;
+        width: fit-content;
+
+    }
+}

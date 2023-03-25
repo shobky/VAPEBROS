@@ -1,0 +1,74 @@
+.permit-container {
+    position: fixed;
+    z-index: 99999999999;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.269);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.permit-inner-container {
+    background-color: white;
+    height: 50vh;
+    width: 45vw;
+    padding: 55px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.permit-inner-container h1 {
+    margin-bottom: 70px;
+}
+.permit-head {
+    font-size: 20px;
+
+}
+.permit-que{
+    margin-top: 25px;
+    font-size: 20px;
+}
+.permit-buttons{
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+}
+.permit-buttons button{
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 80px;
+    text-align: center;
+}
+.permit-yes{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.719);
+}
+.permit-no{
+    background-color: black;
+    color: white;
+    border: none;
+}
+.permit-yes:hover{
+    background-color: rgb(25, 223, 65);
+    color: white;
+    border: 1px solid rgb(25, 223, 65);
+
+}
+.permit-no:hover{
+    opacity: .7;
+
+}
+
+.nopermit-error{
+    color: rgb(255, 0, 0);
+    font-size: 16px ;
+}   
