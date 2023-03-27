@@ -1,0 +1,251 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20vh;
+}
+
+.about-section1 {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 5vw;
+    gap: 5vw;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.about-us-article {
+    margin-top: 25px;
+    font-size: 16px;
+}
+
+.about-img1 {
+    height: calc(30vh + 20vw);
+}
+
+.about-s2-h {
+    position: relative;
+    z-index: 10;
+}
+
+.about-section2 {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    position: relative;
+    min-height: 600px;
+
+}
+
+.associate-floating-container {
+    position: absolute;
+    display: flex;
+    width: fit-content;
+    gap: 15px;
+    align-items: center;
+}
+
+.a-f-img {
+    background-color: gray;
+    width: 15vw;
+    max-width: 175px;
+    max-width: 125px;
+    transition: ease-in-out .4s;
+
+}
+
+.a-f-img:hover {
+    width: 22vw;
+    max-width: 200px;
+}
+
+.a-f-text {
+    width: 5vw;
+    min-width: 70px;
+    opacity: .7;
+    text-decoration: underline;
+}
+
+.a-f-top-right {
+    top: 7%;
+    right: 7%;
+}
+
+.a-f-top-left {
+    top: 10%;
+    left: 15%;
+}
+
+.a-f-bottom {
+    bottom: 15%;
+    left: 30%;
+    width: 20vw !important;
+    max-width: 200px !important;
+    min-width: 150px !important;
+}
+
+.about-section3 {
+    margin-top: 10%;
+    box-sizing: border-box;
+    min-height: 120vh;
+    background-image: url('../../assets/about5.jpg');
+    background-size: cover;
+    width: 100%;
+    margin-bottom: 20%;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.332); */
+}
+
+.about-section3-texts {
+    margin: 30vh 5vw;
+}
+
+.about-section3 h1 {
+    margin-bottom: 25px;
+    font-size: 28px;
+
+
+}
+
+.about-s3-article {
+    font-size: 16px;
+    width: 40vw;
+    margin-bottom: 15px;
+
+}
+
+.about-section4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-section4 h1 {
+    margin-bottom: 25px;
+
+}
+
+.about-section4 p {
+    margin: 0 5vw 10vh 5vw;
+}
+
+.about-s4-imgs {
+    display: flex;
+    gap: 1px;
+}
+
+.about-section4-img {
+    width: 30vw;
+}
+
+@media (width >=861px) {
+    .about-mobile-photo {
+        display: none;
+    }
+
+}
+
+@media (width <=600px) {
+    .about-section1 {
+        display: flex;
+        flex-direction: column;
+        margin: 5vh 5vw;
+        gap: 10vw;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        height: 110vh;
+        min-height: 900px;
+    }
+
+    .about-section1 h1 {
+        text-align: center;
+    }
+
+    .about-us-article {
+        font-size: 16px;
+        text-align: center;
+
+    }
+
+    .about-img1 {
+        width: 100%;
+        height: fit-content;
+    }
+}
+
+@media (width <=860px) {
+
+
+
+
+
+
+    .about-mobile-photo {
+        width: 100%;
+    }
+
+    .about-section3 {
+        margin-top: 10%;
+        background-position-x: center;
+        height: 100vh ;
+        min-height: 800px;
+        margin-bottom: 20%;
+        background-image: none;
+        /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.332); */
+    }
+
+    .about-section3-texts {
+        margin: 10vh 5vw;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-section3 h1 {
+        margin-bottom: 25px;
+        font-size: 28px;
+
+    }
+
+    .about-s3-article {
+        font-size: 16px;
+        width: 90vw;
+        margin-bottom: 15px;
+
+    }
+
+    .a-f-text {
+        width: 5vw;
+        min-width: 70px;
+        opacity: .7;
+        text-decoration: underline;
+    }
+
+    .a-f-top-right {
+        top: 25%;
+        right: 5%;
+    }
+
+    .a-f-top-left {
+        top: 10%;
+        left: 15%;
+    }
+
+    .a-f-bottom {
+        bottom: 25%;
+        left: 20%;
+
+    }
+
+    .about-section4 p {
+        margin: 0 5vw 10vh 5vw;
+        text-align: center;
+    }
+}

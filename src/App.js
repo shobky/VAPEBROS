@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { lazy, Suspense, useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router'
 import Footer from './components/footer/Footer'
 import Nav from './components/nav/Nav'
@@ -7,6 +7,11 @@ import Home from './pages/home/Home'
 import Shop from './pages/shop/Shop'
 import Cookies from 'js-cookie';
 import Permit from './components/permit/Permit'
+import Wholesale from './pages/wholesale/Wholesale'
+import Blogs from './pages/blog/Blogs'
+import ReadBlog from './components/blog/ReadBlog'
+import AboutSkele from './components/skeles/AboutSkele'
+const About = lazy(() => import('./pages/about/About'))
 
 const App = () => {
   const [activePage, setActivePage] = useState('')
@@ -44,9 +49,11 @@ const App = () => {
     if (activePage === 'Contact') {
       return
     }
-    activeLink.style.opacity = .5
+    activeLink.style.fontWeight = 'bold'
+
+
     return () => {
-      activeLink.style.opacity = '';
+      activeLink.style.fontWeight = ''
 
     };
   }, [activePage]);
@@ -60,11 +67,23 @@ const App = () => {
       {!legal &&
         < Permit nonPermit={nonPermit} handleAddCookie={handleAddCookie} />}
       <Nav handleActivePage={handleActivePage} activeLink={activePage} />
-      <br />
-      <br />
-      <br />
+      {
+        <div className='nav-space'></div>
+      }
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/wholesale' element={<Wholesale />} />
+        <Route path='/blog' element={<Blogs />} />
+        <Route path='/blog=blogname' element={<ReadBlog />} />
+        <Route path='/about' element={
+          <Suspense fallback={<AboutSkele />}>
+            <About />
+          </Suspense>
+        } />
+
+
+
+
       </Routes>
 
       <ProductsProvider>

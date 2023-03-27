@@ -1,0 +1,122 @@
+.blogs-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3vh;
+    margin-bottom: 20%;
+}
+
+@media(width >=661px) {
+    .blogs-inner-container {
+        gap: 20px 20px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+    }
+
+    .single-blog-container {
+        width: 20vw;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 15px 0px 15px 15px;
+
+    }
+
+    .s-blog-img {
+        width: 125px;
+        height: 125px;
+        background-color: rgb(162, 162, 162);
+        cursor: pointer;
+        margin-bottom: 15px;
+
+    }
+
+    .s-blog-name {
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .s-blog-desc {
+        font-size: 14px;
+        opacity: .8;
+    }
+
+    .s-blog-link {
+        font-size: 13px;
+        color: rgba(45, 44, 44, 0.844);
+        transition: ease-in-out .2s;
+        padding: 7px;
+        margin: -7px;
+
+    }
+
+    .s-blog-link:hover {
+        color: black;
+        margin-left: 5px;
+        transition: ease-in-out .2s;
+    }
+    .blogs-header{
+        display: none;
+    }
+}
+
+@media(width <=660px) {
+    .blogs-header{
+        font-weight: 200;
+        font-size: 24px;
+        
+    }
+    .blogs-inner-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        gap: 5vh 5vw;
+        margin-top: 7vh;
+
+    }
+
+    .single-blog-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 40vw;
+
+    }
+
+    .s-blog-img {
+        width: 40vw;
+        height: 40vw;
+        background-color: rgb(162, 162, 162);
+        cursor: pointer;
+        margin-bottom: 15px;
+
+    }
+
+    .s-blog-name {
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .s-blog-desc {
+        font-size: 14px;
+        opacity: .8;
+    }
+
+    .s-blog-link {
+        font-size: 13px;
+        color: rgba(45, 44, 44, 0.844);
+        transition: ease-in-out .2s;
+        padding: 7px;
+        margin: -7px;
+
+    }
+}

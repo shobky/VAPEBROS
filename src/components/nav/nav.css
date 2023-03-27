@@ -1,14 +1,16 @@
-@media (width >= 1036px) {
+@media (width >=1036px) {
     .nav-container {
         display: flex;
         gap: 3.5vw;
         align-items: center;
-        
+
     }
-    .plus1036-display-none{
+
+    .plus1036-display-none {
         display: none;
     }
 }
+
 .header-container {
     display: flex;
     align-items: center;
@@ -20,6 +22,7 @@
     width: 100%;
     box-sizing: border-box;
     z-index: 3;
+    
 }
 
 .header-container h1 {
@@ -32,6 +35,7 @@
     text-decoration: none;
     opacity: .9;
     cursor: pointer;
+    
 }
 
 .nav-link:hover {
@@ -79,9 +83,14 @@
         font-size: 18px;
         z-index: 2;
     }
-    .nav-menu-btn_close{
+
+    .nav-menu-btn_close {
         font-size: 24px;
         z-index: 2;
+    }
+
+    .header-container {
+        z-index: 5;
     }
 
     .nav-container-show {

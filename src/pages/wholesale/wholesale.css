@@ -1,0 +1,136 @@
+.wholesale .section1 {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 30vh;
+}
+
+.wholesale .section2 {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 30vh;
+}
+
+.wholesale .sectoin3 {
+    min-height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 30vh;
+}
+
+.wholesale-head {
+    font-size: 30px;
+}
+
+.whlesale-article {
+    width: 65vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+.partners-container {
+    gap: 10vh 10vw;
+    margin-top: 15vh;
+    display: flex;
+}
+
+.partners-container p {
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0.221);
+    padding: 15px;
+}
+
+.wholesale-input_textarea {
+    resize: none;
+    height: 150px;
+    padding: 5px;
+}
+
+.wholesale .form-contaienr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.wholesale form {
+    display: flex;
+    flex-direction: column;
+}
+
+.wholesale form label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: rgba(46, 46, 47, 0.723);
+    font-weight: bold;
+}
+
+.wholesale form input {
+    margin-bottom: 20px;
+    height: 35px;
+
+    border: 1px solid rgba(0, 0, 0, 0.265);
+    padding: 5px;
+}
+
+.wholesale-select {
+    margin-bottom: 20px;
+    width: 15vw !important;
+    max-width: 175px !important;
+    max-width: 350px;
+    height: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.265);
+    padding: 5px;
+
+}
+
+.form-inner-flex {
+    display: flex;
+    gap: 10px;
+}
+
+.form-inner-flex input {
+    width: 15vw !important;
+    max-width: 175px !important;
+}
+
+.form-inner-flex-section {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.wholesale-from-btn {
+    margin: 50px 105px;
+    height: 45px;
+    font-size: 18px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgba(40, 39, 39, 0.543);
+    cursor: pointer;
+transition: ease-in-out .2s;
+
+}
+
+.wholesale-from-btn:hover {
+    margin: 50px 105px;
+    height: 45px;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+transition: ease-in-out .2s;
+}

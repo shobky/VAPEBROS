@@ -32,8 +32,8 @@ const Nav = ({ handleActivePage, activePage }) => {
                 <Link id='Disposables' to='/Disposables' className='nav-link' onClick={() => { handleActivePage('Disposables'); setIsMenuOpen(false); }}>Disposables</Link>
                 <Link id='E-Liquid' to='/E-Liquid' className='nav-link' onClick={() => { handleActivePage('E-Liquid'); setIsMenuOpen(false); }}>E-Liquid</Link>
                 <Link id='Accessories' to='/Accessories' className='nav-link' onClick={() => { handleActivePage('Accessories'); setIsMenuOpen(false); }}>Accessories</Link>
-                <Link id='Wholesale' to='/Wholesale' className='nav-link' onClick={() => { handleActivePage('Wholesale'); setIsMenuOpen(false); }}>Wholesale</Link>
-                <Link id='Blog' to='/Blog' className='nav-link' onClick={() => { handleActivePage('Blog'); setIsMenuOpen(false); }}>Blog</Link>
+                <Link id='Wholesale' to='/wholesale' className='nav-link' onClick={() => { handleActivePage('Wholesale'); setIsMenuOpen(false); }}>Wholesale</Link>
+                <Link id='Blog' to='/blog' className='nav-link' onClick={() => { handleActivePage('Blog'); setIsMenuOpen(false); }}>Blog</Link>
                 <Link id='About' to='/About' className='nav-link' onClick={() => { handleActivePage('About'); setIsMenuOpen(false); }}>About</Link>
                 <Link id='Newsletter' to='/Newsletter' className='nav-link' onClick={() => { handleActivePage('Newsletter'); setIsMenuOpen(false); }}>Newsletter</Link>
                 <Link id='Contact' to='/Contact' className='nav-link nav-link-special' onClick={() => { handleActivePage('Contact'); setIsMenuOpen(false); }}>Contact</Link>
