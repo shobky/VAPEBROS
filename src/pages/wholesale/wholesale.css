@@ -16,14 +16,7 @@
     top: 30vh;
 }
 
-.wholesale .sectoin3 {
-    min-height: 150vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 30vh;
-}
+
 
 .wholesale-head {
     font-size: 30px;
@@ -85,32 +78,7 @@
     padding: 5px;
 }
 
-.wholesale-select {
-    margin-bottom: 20px;
-    width: 15vw !important;
-    max-width: 175px !important;
-    max-width: 350px;
-    height: 35px;
-    border: 1px solid rgba(0, 0, 0, 0.265);
-    padding: 5px;
 
-}
-
-.form-inner-flex {
-    display: flex;
-    gap: 10px;
-}
-
-.form-inner-flex input {
-    width: 15vw !important;
-    max-width: 175px !important;
-}
-
-.form-inner-flex-section {
-    display: flex;
-    flex-direction: column;
-
-}
 
 .wholesale-from-btn {
     margin: 50px 105px;
@@ -120,7 +88,7 @@
     color: rgb(0, 0, 0);
     border: 1px solid rgba(40, 39, 39, 0.543);
     cursor: pointer;
-transition: ease-in-out .2s;
+    transition: ease-in-out .2s;
 
 }
 
@@ -132,5 +100,156 @@ transition: ease-in-out .2s;
     color: white;
     border: none;
     cursor: pointer;
-transition: ease-in-out .2s;
+    transition: ease-in-out .2s;
+}
+
+@media (width >=743px) {
+    .form-inner-flex {
+        display: flex;
+        gap: 10px;
+    }
+
+    .form-inner-flex input {
+        width: 15vw !important;
+        max-width: 175px !important;
+    }
+
+    .form-inner-flex-section {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .wholesale-select {
+        margin-bottom: 20px;
+        width: 15vw !important;
+        max-width: 175px !important;
+        max-width: 350px;
+        height: 35px;
+        border: 1px solid rgba(0, 0, 0, 0.265);
+        padding: 5px;
+
+    }
+    .wholesale .sectoin3 {
+        min-height: 150vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: 30vh;
+    }
+
+
+}
+
+@media (width <=742px) {
+
+    .wholesale .sectoin3 {
+        min-height: 150vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: 30vh;
+        margin-bottom: 10vh;
+        
+    }
+    .partners-container {
+        gap: 50%;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .whlesale-article {
+        width: 90%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 50px;
+        font-size: 18px;
+    }
+
+    .wholesale-head {
+        width: 90%;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .wholesale-input_textarea {
+        resize: none;
+        height: 200px;
+        padding: 5px;
+    }
+
+    .wholesale .form-contaienr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 5vw 10vh 5vw;
+    }
+
+    .wholesale form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wholesale form label {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: rgba(46, 46, 47, 0.723);
+        font-weight: bold;
+    }
+
+    .wholesale form input {
+        margin-bottom: 30px;
+        height: 40px;
+        border: 1px solid rgba(0, 0, 0, 0.265);
+        padding: 5px;
+    }
+
+    .wholesale-select {
+        margin-bottom: 30px;
+        width: 100% !important;
+        height: 35px;
+        border: 1px solid rgba(0, 0, 0, 0.265);
+        padding: 5px;
+
+    }
+
+    .form-inner-flex {}
+
+    .form-inner-flex input {}
+
+    .form-inner-flex-section {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .wholesale-from-btn {
+        margin: 50px 105px;
+        height: 45px;
+        font-size: 18px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border: 1px solid rgba(40, 39, 39, 0.543);
+        cursor: pointer;
+        transition: ease-in-out .2s;
+
+    }
+
+    .wholesale-from-btn:hover {
+        margin: 50px 105px;
+        height: 45px;
+        font-size: 18px;
+        background-color: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: ease-in-out .2s;
+    }
 }

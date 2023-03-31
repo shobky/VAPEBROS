@@ -1,0 +1,133 @@
+.product-similar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.product-page-container {
+    min-height: 100vh;
+    display: flex;
+    margin: -5vh 0vw 10vh 0vw;
+    align-items: center;
+    gap: 5vw;
+}
+
+
+.product-page-img {
+    width: 40vw;
+}
+
+.product-page-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start;
+    width: fit-content;
+}
+
+.product-page-details h1 {
+    font-size: 40px;
+}
+
+.product-page-desc {
+    font-size: 20px;
+    opacity: .9;
+}
+
+.product-page-details button {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+
+}
+
+.product-page-details button:hover {
+    cursor: pointer;
+    opacity: .9;
+}
+
+.similar-products-container {
+    min-height: 100vh;
+    padding: 0vh 0 15vh 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.similar-products-map {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vw;
+}
+
+.similar-products-err-msg {
+    font-size: 18px;
+    opacity: .8;
+}
+
+@media (width <=742px) {
+
+    .product-page-container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin: -10vh 5vw 5vh 5vw;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .product-page-img {
+        width: 100%;
+    }
+
+    .product-page-details {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product-page-details h1 {
+        font-size: 35px;
+    }
+
+    .product-page-desc {
+        font-size: 20px;
+        opacity: .9;
+        width: 70%;
+
+    }
+
+    .product-page-details button {
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        border: none;
+        padding: 15px 20px;
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+
+    .similar-products-container {
+        min-height: 70vh;
+        padding: 0vh 0 10vh 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10vh;
+    }
+
+
+}

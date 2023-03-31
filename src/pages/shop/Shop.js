@@ -1,15 +1,19 @@
 import React from 'react'
 import Categories from '../../components/shop/categories/Categories'
-import Products from '../../components/shop/products/Products'
 import { useProducts } from '../../contexts/ProductsContext'
 import './shop.css'
+import Dispo from '../../components/shop/products/Dispo'
+import Liqu from '../../components/shop/products/Liqu'
 
-const Shop = ({ category}) => {
+const Shop = ({ category }) => {
     const { products } = useProducts()
     return (
         <div className='shop-container'>
-            <Categories category={category}/>
-            <Products category={category} />
+            <Categories category={category} />
+            {
+                category === 'disposables' ?
+                    <Dispo /> : <Liqu />
+            }
         </div>
     )
 }

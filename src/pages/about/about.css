@@ -93,22 +93,25 @@
     margin-top: 10%;
     box-sizing: border-box;
     min-height: 120vh;
-    background-image: url('../../assets/about5.jpg');
+    /* background-image: url('../../assets/about5.jpg'); */
     background-size: cover;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20%;
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.332); */
 }
 
 .about-section3-texts {
-    margin: 30vh 5vw;
+    text-align: center  ;
+
 }
 
 .about-section3 h1 {
     margin-bottom: 25px;
     font-size: 28px;
-
-
 }
 
 .about-s3-article {
@@ -145,7 +148,8 @@
 
 @media (width >=861px) {
     .about-mobile-photo {
-        display: none;
+        width: 40vw;
+        margin-top: 5vh;
     }
 
 }

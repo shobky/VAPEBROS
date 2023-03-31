@@ -54,8 +54,7 @@ const About = () => {
 
             <section className='about-section3'>
                 <article className='about-section3-texts'> <h1>About the liquid</h1>
-                    <p className='about-s3-article'>dignissim in turpis at, placerat consectetur felis. Cras a velit lobortis, pellentesque eros vel, ornare lectus.<br /> <br /> Sed dictum enim leo, mollis volutpat libero malesuada id. Vivamus sagittis purus risus.</p>
-                    <p className='about-s3-article'>dignissim in turpis at, mollis volutpat libero malesuada id. Vivamus sagittis purus risus.</p>
+                    <p className='about-s3-article'>dignissim in turpis at, placerat consectetur felis. Cras a velit lobortis, pellentesque eros vel, ornare lectus.</p>
                 </article>
                 <img src={about5} alt="" className='about-mobile-photo' />
             </section>

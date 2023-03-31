@@ -1,8 +1,8 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react'
-import { Route, Routes } from 'react-router'
+import { Route, Routes, useLocation } from 'react-router'
 import Footer from './components/footer/Footer'
 import Nav from './components/nav/Nav'
-import { ProductsProvider } from './contexts/ProductsContext'
+import { ProductsProvider, useProducts } from './contexts/ProductsContext'
 import Home from './pages/home/Home'
 import Shop from './pages/shop/Shop'
 import Cookies from 'js-cookie';
@@ -10,13 +10,26 @@ import Permit from './components/permit/Permit'
 import Wholesale from './pages/wholesale/Wholesale'
 import Blogs from './pages/blog/Blogs'
 import ReadBlog from './components/blog/ReadBlog'
-import AboutSkele from './components/skeles/AboutSkele'
-const About = lazy(() => import('./pages/about/About'))
+import About from './pages/about/About'
+import AddProducts from './admin/add-products/AddProducts'
+import ProductPage from './pages/product/ProductPage'
+import SimilarProducts from './pages/product/SimilarProducts'
+import Contact from './pages/contact/Contact'
 
 const App = () => {
+
+  const { allProducts } = useProducts()
+
   const [activePage, setActivePage] = useState('')
   const [legal, setLegal] = useState(true)
   const [nonPermit, setNonPermit] = useState(false)
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });;
+  }, [pathname]);
+
   const handleAddCookie = (value) => {
     setLegal(value)
     setNonPermit(!value)
@@ -47,13 +60,18 @@ const App = () => {
     }
     const activeLink = document.getElementById(activePage)
     if (activePage === 'Contact') {
+      activeLink.style.background = 'black'
+      activeLink.style.color = 'white'
       return
     }
+    document.getElementById('Contact').style.background = ''
+    document.getElementById('Contact').style.color = ''
     activeLink.style.fontWeight = 'bold'
 
 
     return () => {
       activeLink.style.fontWeight = ''
+
 
     };
   }, [activePage]);
@@ -71,34 +89,36 @@ const App = () => {
         <div className='nav-space'></div>
       }
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' exact element={<Home />} />
         <Route path='/wholesale' element={<Wholesale />} />
         <Route path='/blog' element={<Blogs />} />
         <Route path='/blog=blogname' element={<ReadBlog />} />
-        <Route path='/about' element={
-          <Suspense fallback={<AboutSkele />}>
-            <About />
-          </Suspense>
-        } />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
 
-
-
+        <Route path='/disposables' element={<Shop category={'disposables'} />} />
+        <Route path='/e-Liquid' element={<Shop category={'e-Liquid'} />} />
+        <Route path='/accessories' element={<Shop category={'accessories'} />} />
+        {
+          allProducts?.map((product) => (
+            <Route path={`/product=${product.name}`} element={
+              <div className='product-similar-container'>
+                <ProductPage product={product} />
+                <SimilarProducts category={activePage} product={product} />
+              </div>
+            } />
+          ))
+        }
 
       </Routes>
 
-      <ProductsProvider>
-        <Routes>
-          <Route path='/disposables' element={<Shop category={'disposables'} />} />
-          <Route path='/e-Liquid' element={<Shop category={'e-Liquid'} />} />
-          <Route path='/accessories' element={<Shop category={'accessories'} />} />
-
-          {/* <Route path='/product' element={<ProductPage />} /> */}
-
-
-        </Routes>
-      </ProductsProvider>
+      <Routes>
+        <Route path='/dashboard/add-products' element={<AddProducts />} />
+      </Routes>
 
       <Footer />
+
+
     </>
 
   )

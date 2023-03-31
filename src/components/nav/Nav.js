@@ -18,7 +18,7 @@ const Nav = ({ handleActivePage, activePage }) => {
 
     return (
         <div className='header-container'>
-            <h1 onClick={() => navigate('/')}>VAPEBROS</h1>
+            <h1 onClick={() =>{ navigate('/'); handleActivePage('')}}>VAPEBROS</h1>
             <div className='plus1036-display-none'>    {
                 isMenuOpen ?
                     <IoCloseOutline onClick={closeMenu} className='nav-menu-btn_close' />
@@ -29,9 +29,9 @@ const Nav = ({ handleActivePage, activePage }) => {
                 <div className='plus1036-display-none'>
                     <Link id='Home' to='/' className='nav-link' onClick={() => { handleActivePage('Home'); setIsMenuOpen(false); }}>Home</Link>
                 </div>
-                <Link id='Disposables' to='/Disposables' className='nav-link' onClick={() => { handleActivePage('Disposables'); setIsMenuOpen(false); }}>Disposables</Link>
-                <Link id='E-Liquid' to='/E-Liquid' className='nav-link' onClick={() => { handleActivePage('E-Liquid'); setIsMenuOpen(false); }}>E-Liquid</Link>
-                <Link id='Accessories' to='/Accessories' className='nav-link' onClick={() => { handleActivePage('Accessories'); setIsMenuOpen(false); }}>Accessories</Link>
+                <Link id='Disposables' to='/disposables' className='nav-link' onClick={() => { handleActivePage('Disposables'); setIsMenuOpen(false); }}>Disposables</Link>
+                <Link id='E-Liquid' to='/e-Liquid' className='nav-link' onClick={() => { handleActivePage('E-Liquid'); setIsMenuOpen(false); }}>E-Liquid</Link>
+                <Link id='Accessories' to='/accessories' className='nav-link' onClick={() => { handleActivePage('Accessories'); setIsMenuOpen(false); }}>Accessories</Link>
                 <Link id='Wholesale' to='/wholesale' className='nav-link' onClick={() => { handleActivePage('Wholesale'); setIsMenuOpen(false); }}>Wholesale</Link>
                 <Link id='Blog' to='/blog' className='nav-link' onClick={() => { handleActivePage('Blog'); setIsMenuOpen(false); }}>Blog</Link>
                 <Link id='About' to='/About' className='nav-link' onClick={() => { handleActivePage('About'); setIsMenuOpen(false); }}>About</Link>

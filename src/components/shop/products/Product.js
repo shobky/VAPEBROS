@@ -1,13 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
-const Product = () => {
+const Product = ({ product }) => {
+    const navigate = useNavigate()
     return (
-        <div className='products_product-container'>
-            <div className='products_product-img'></div>
-            <p className='products_product-name'>Product</p>
-            <p className='products_product-desc'>This is the product description</p>
-            <Link to={'/product'} className='products_product-btn'>View</Link>
+        <div onClick={() => navigate(`/product=${product.name}`)} className='products_product-container'>
+            {product.image &&
+                <img src={product.image} className='products_product-img' alt={product.name} />}
+            <p className='products_product-name'>{product.name}</p>
+            <p className='products_product-desc'>{product.description}</p>
+            <Link to={`/product=${product.name}`} className='products_product-btn'>View</Link>
         </div>
     )
 }
