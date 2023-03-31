@@ -95,6 +95,7 @@
         box-sizing: border-box;
         background-color: white;
         gap: 10vw;
+        z-index: 2;
     }
 
     .cat-filters {
@@ -111,6 +112,10 @@
         gap: 10px;
         font-size: 14px;
         letter-spacing: .6px;
+    }
+    .filters-flex:active {
+        font-weight: bold;
+        letter-spacing: .4px;
     }
 
     .cat-search-input {
@@ -132,19 +137,19 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: 10px;
+        gap: 15px;
         margin-top: 15px;
-        width: 50vw;
+        width: 100%;
     }
-    .cat-filters{
+
+    .cat-filters {
         background-color: white;
         width: 100%;
-        height: 100%;
-        height: 100%;
-        z-index: 10;
-        position: fixed;
-        top: 0;
-        left: -100vw;
+        height: 40vh;
+        z-index: 1;
+        position: relative;
+        top: -40vh;
+        left: 0vw;
         padding: 0 5vw;
         box-sizing: border-box;
         display: flex;
@@ -155,17 +160,18 @@
     .cat-filters__active {
         background-color: white;
         width: 100%;
-        height: 100%;
-        height: 100%;
-        z-index: 10;
-        position: fixed;
-        top: 0;
+        height: 30vh;
+        z-index: 1;
+        position: relative;
+        top: 40px;
         left: 0;
-        padding: 0 5vw;
+        padding: 15px 5vw;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         transition: ease-in-out .3s;
+        box-shadow: 0 7px 10px .2px rgba(158, 158, 158, 0.34);
+        border-radius: 50px;
 
     }
 
@@ -176,18 +182,9 @@
         margin-bottom: 10vh;
     }
 
-    .filter-open-head {
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    .filter-open-close-btn {
-        font-size: 24px;
-    }
-
     .cat-header {
-        font-size: 20px;
-        margin-bottom: 5px;
+        font-size: 18px;
+        opacity: .8;
     }
 
     .filter-pill {

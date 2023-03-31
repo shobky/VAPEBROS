@@ -10,12 +10,14 @@ const Categories = ({ category }) => {
   const [activeFilters, setActiveFilters] = useState([]);
   const [filtersOpen, setFiltersOpen] = useState(false)
 
-  const openFilterMenu = () => {
-    setFiltersOpen(true)
-  }
+  const handleFilterSelect = () => {
 
-  const closeFilters = () => {
-    setFiltersOpen(false)
+    if (filtersOpen) {
+      setFiltersOpen(false)
+
+    } else {
+      setFiltersOpen(true)
+    }
   }
 
   const handleFilterClick = (filter) => {
@@ -34,15 +36,15 @@ const Categories = ({ category }) => {
     <div className='category'>
       <div className='cat-container'>
         <div className='cat-mobile-header'>
-          <p className='filters-flex' onClick={openFilterMenu}> <GiSettingsKnobs className='cat-filter-ico' />Filter</p>
+          <p className='filters-flex' onClick={handleFilterSelect}> <GiSettingsKnobs className='cat-filter-ico' />Filter</p>
           <input className='cat-search-input' placeholder={`Search ${category}...  `} />
           <IoIosSearch className='cat-search-ico' />
         </div>
         <div className={filtersOpen ? 'cat-filters__active' : 'cat-filters'}>
-          <div className='filter_active-header'>
+          {/* <div className='filter_active-header'>
             <p className='filter-open-head'>Filters</p>
             <IoCloseOutline onClick={closeFilters} className='filter-open-close-btn' />
-          </div>
+          </div> */}
 
           <p className='cat-header'>Number of puffs</p>
           <div className='cat-filter-pills-container'>
