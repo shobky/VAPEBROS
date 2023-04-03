@@ -15,6 +15,7 @@ import AddProducts from './admin/add-products/AddProducts'
 import ProductPage from './pages/product/ProductPage'
 import SimilarProducts from './pages/product/SimilarProducts'
 import Contact from './pages/contact/Contact'
+import NewsLetter from './pages/newsLetter/NewsLetter'
 
 const App = () => {
 
@@ -95,7 +96,9 @@ const App = () => {
         <Route path='/blog=blogname' element={<ReadBlog />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/newsLetter' element={<NewsLetter />} />
 
+        
         <Route path='/disposables' element={<Shop category={'disposables'} />} />
         <Route path='/e-Liquid' element={<Shop category={'e-Liquid'} />} />
         <Route path='/accessories' element={<Shop category={'accessories'} />} />
