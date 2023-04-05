@@ -9,6 +9,13 @@
     .plus1036-display-none {
         display: none;
     }
+
+    .nav-link-special:hover {
+        opacity: .8;
+        color: rgb(255, 255, 255);
+        padding: 7px 10px;
+        margin-left: 19px;
+    }
 }
 
 .header-container {
@@ -22,7 +29,7 @@
     width: 100%;
     box-sizing: border-box;
     z-index: 3;
-    
+
 }
 
 .header-container h1 {
@@ -35,7 +42,7 @@
     text-decoration: none;
     opacity: .9;
     cursor: pointer;
-    
+
 }
 
 .nav-link:hover {
@@ -45,22 +52,17 @@
 }
 
 .nav-link-special {
-    background-color: white;
-    color: black;
-    outline: 1px solid rgba(82, 82, 82, 0.588);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    outline: 1px solid black;
     padding: 7px;
     border-radius: 25px;
     font-size: 15px;
     margin-left: 25px;
+    transition: ease-in-out .2s;
 }
 
-.nav-link-special:hover,
-.nav-link-special__active {
-    opacity: 1;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    outline: 1px solid black;
-}
+
 
 @media (width <=1035px) {
     .nav-container {
@@ -111,14 +113,17 @@
     }
 
     .nav-link-special {
-        background-color: white;
-        color: black;
-        outline: 1px solid rgba(82, 82, 82, 0.588);
         padding: 7px;
         border-radius: 25px;
         font-size: 15px;
         margin-left: 0px;
         width: fit-content;
+    }
+
+    .nav-link-special:hover,
+    .nav-link-special:active {
+        opacity: .8;
+        color: rgb(255, 255, 255);
     }
 
     .header-container h1 {

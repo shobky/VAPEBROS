@@ -6,12 +6,24 @@ import { useProducts } from '../../../contexts/ProductsContext'
 const Dispo = () => {
     const {
         accessories,
+        searchQuery
     } = useProducts()
 
     return (
         <div className='prodcuts-container'>
             {
-                accessories?.map((product, index) => (
+                accessories?.filter((f) => {
+                    if (searchQuery === '') {
+                        return f
+                    }
+                    else if (f.name.toLowerCase().includes(searchQuery.toLowerCase())) {
+                        return f
+                    } else if (f.puffs === searchQuery) {
+                        return f
+                    } else {
+
+                    }
+                }).map((product, index) => (
                     <Product key={index} product={product} />
                 ))
             }

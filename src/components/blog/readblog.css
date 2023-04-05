@@ -20,7 +20,7 @@
 .read-blog-img {
     background-color: rgb(126, 126, 126);
     width: 30vw;
-    height: 30vw;
+    height: auto;
 }
 
 .read-blog article {

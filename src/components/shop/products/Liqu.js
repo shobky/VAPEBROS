@@ -5,14 +5,26 @@ import { useProducts } from '../../../contexts/ProductsContext'
 
 const Liqu = () => {
     const {
-        eLiquid
+        eLiquid,
+        searchQuery
     } = useProducts()
 
 
     return (
         <div className='prodcuts-container'>
-            {
-                eLiquid?.map((product, index) => (
+           {
+                eLiquid?.filter((f) => {
+                    if (searchQuery === '') {
+                        return f
+                    }
+                    else if (f.name.toLowerCase().includes(searchQuery.toLowerCase())) {
+                        return f
+                    } else if (f.puffs === searchQuery) {
+                        return f
+                    } else {
+
+                    }
+                }).map((product, index) => (
                     <Product key={index} product={product} />
                 ))
             }

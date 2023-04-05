@@ -11,7 +11,9 @@ export const useProducts = () => {
 
 export const ProductsProvider = ({ children }) => {
 
-    const location = useLocation()
+    const [searchQuery, setSearchQuery] = useState('')
+
+    console.log(searchQuery)
 
     const [disposables, setDisposables] = useState([]);
     const [eLiquid, setELiquid] = useState([]);
@@ -22,6 +24,10 @@ export const ProductsProvider = ({ children }) => {
     useEffect(() => {
         setAllProdcuts([...disposables, ...eLiquid, ...accessories])
     }, [disposables, eLiquid, accessories])
+
+    const hadnleSearchInput = (q) => {
+        setSearchQuery(q)
+    }
 
     const fetchDisposables = async () => {
         let data = []
@@ -74,7 +80,9 @@ export const ProductsProvider = ({ children }) => {
         disposables,
         eLiquid,
         accessories,
-        allProducts
+        allProducts,
+        hadnleSearchInput,
+        searchQuery
     }
     return (
         <ProductsContext.Provider value={value}>

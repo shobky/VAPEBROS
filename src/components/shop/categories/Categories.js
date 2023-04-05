@@ -4,11 +4,13 @@ import { GiSettingsKnobs } from 'react-icons/gi'
 import { IoIosSearch } from 'react-icons/io'
 import { AiOutlineMenu } from 'react-icons/ai';
 import { IoCloseOutline } from 'react-icons/io5';
+import { useProducts } from '../../../contexts/ProductsContext';
 
 
 const Categories = ({ category }) => {
   const [activeFilters, setActiveFilters] = useState([]);
   const [filtersOpen, setFiltersOpen] = useState(false)
+  const { hadnleSearchInput } = useProducts()
 
   const handleFilterSelect = () => {
 
@@ -37,7 +39,7 @@ const Categories = ({ category }) => {
       <div className='cat-container'>
         <div className='cat-mobile-header'>
           <p className='filters-flex' onClick={handleFilterSelect}> <GiSettingsKnobs className='cat-filter-ico' />Filter</p>
-          <input className='cat-search-input' placeholder={`Search ${category}...  `} />
+          <input onChange={(e) => hadnleSearchInput(e.target.value)} className='cat-search-input' placeholder={`Search ${category}...  `} />
           <IoIosSearch className='cat-search-ico' />
         </div>
         <div className={filtersOpen ? 'cat-filters__active' : 'cat-filters'}>

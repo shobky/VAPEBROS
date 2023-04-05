@@ -2,20 +2,22 @@ import React, { lazy, Suspense, useEffect, useState } from 'react'
 import { Route, Routes, useLocation } from 'react-router'
 import Footer from './components/footer/Footer'
 import Nav from './components/nav/Nav'
-import { ProductsProvider, useProducts } from './contexts/ProductsContext'
+import { useProducts } from './contexts/ProductsContext'
 import Home from './pages/home/Home'
 import Shop from './pages/shop/Shop'
 import Cookies from 'js-cookie';
 import Permit from './components/permit/Permit'
 import Wholesale from './pages/wholesale/Wholesale'
 import Blogs from './pages/blog/Blogs'
-import ReadBlog from './components/blog/ReadBlog'
 import About from './pages/about/About'
 import AddProducts from './admin/add-products/AddProducts'
 import ProductPage from './pages/product/ProductPage'
 import SimilarProducts from './pages/product/SimilarProducts'
 import Contact from './pages/contact/Contact'
 import NewsLetter from './pages/newsLetter/NewsLetter'
+import AddBlogs from './admin/add-blogs/AddBlogs'
+import { BlogsProvider } from './contexts/BlogsContext'
+import BlogRoutes from './components/blog/BlogRoutes'
 
 const App = () => {
 
@@ -92,13 +94,12 @@ const App = () => {
       <Routes>
         <Route path='/' exact element={<Home />} />
         <Route path='/wholesale' element={<Wholesale />} />
-        <Route path='/blog' element={<Blogs />} />
-        <Route path='/blog=blogname' element={<ReadBlog />} />
+
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/newsLetter' element={<NewsLetter />} />
 
-        
+
         <Route path='/disposables' element={<Shop category={'disposables'} />} />
         <Route path='/e-Liquid' element={<Shop category={'e-Liquid'} />} />
         <Route path='/accessories' element={<Shop category={'accessories'} />} />
@@ -114,9 +115,17 @@ const App = () => {
         }
 
       </Routes>
+      <BlogsProvider>
+        <Routes>
+          <Route path='/blog' element={<Blogs />} />
+        </Routes>
+        <BlogRoutes />
+      </BlogsProvider>
 
       <Routes>
         <Route path='/dashboard/add-products' element={<AddProducts />} />
+        <Route path='/dashboard/add-blogs' element={<AddBlogs />} />
+
       </Routes>
 
       <Footer />

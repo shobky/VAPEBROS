@@ -4,9 +4,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 3vh;
-    margin-bottom: 20%;
+    justify-content: center;
+    padding-bottom: 5%;
 }
+
 
 @media(width >=661px) {
     .blogs-inner-container {
@@ -25,6 +26,7 @@
         align-items: center;
         text-align: center;
         padding: 15px 0px 15px 15px;
+        transition: ease-in-out .2s;
 
     }
 
@@ -61,17 +63,19 @@
         margin-left: 5px;
         transition: ease-in-out .2s;
     }
-    .blogs-header{
+
+    .blogs-header {
         display: none;
     }
 }
 
 @media(width <=660px) {
-    .blogs-header{
+    .blogs-header {
         font-weight: 200;
         font-size: 24px;
-        
+
     }
+
     .blogs-inner-container {
         display: grid;
         grid-template-columns: auto auto;
