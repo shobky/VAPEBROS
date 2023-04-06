@@ -8,8 +8,8 @@ const BlogRoutes = () => {
     return (
         <Routes>
             {
-                blogsData?.map((blog) => (
-                    <Route path={`blog=${blog.title}`} element={<ReadBlog blog={blog} />} />
+                blogsData?.map((blog, index) => (
+                    <Route key={index} path={`blog=${blog.title}`} element={<ReadBlog blog={blog} />} />
                 ))
             }
         </Routes>

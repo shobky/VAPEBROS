@@ -1,11 +1,25 @@
-import React, { useEffect, useState } from 'react'
-import group from '../../assets/pngs/My project-min.png'
-import vapes from '../../assets/pngs/vapes.jpg'
+import React, { useEffect, useRef, useState } from 'react'
+import group from '../../assets/pngs/group-ae.png'
+import vapes from '../../assets/pngs/vape-ae.png'
 import './home.css'
 const Home = ({ fixed }) => {
   const [big, setBig] = useState(false)
 
+
+  const animatedImgRef = useRef(null);
   useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+        }
+      });
+    });
+
+    if (animatedImgRef.current) {
+      observer.observe(animatedImgRef.current);
+    }
+
     function handleScroll() {
       if (window.pageYOffset > window.innerHeight * 0.3) {
         setBig(true);
@@ -21,6 +35,7 @@ const Home = ({ fixed }) => {
     };
   }, []);
 
+
   return (
     <div
       className='home-container'>
@@ -35,7 +50,11 @@ const Home = ({ fixed }) => {
           <h2 className='home-s2-text'>Accessories & More.<div className='s2-text-border'></div></h2>
           <h2 className='home-s2-text'>Find out<div className='s2-text-border'></div></h2>
         </div>
-        <img src={vapes} className='section-2-img'/>
+        <img id='animatedimg' ref={animatedImgRef} src={vapes} className='section-2-img' alt="" />
+      </section>
+      <section className='home-section3'>
+        <h2 className='home-s3-txt'>consectetur in velit. In eu quam a leo tristique ultricies ac sed sapien. Donec turpis turpis, pretium in auctor vitae, sagittis sit amet lacus.</h2>
+        <button>Wholesale</button>
       </section>
     </div>
   )

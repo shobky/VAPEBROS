@@ -13,8 +13,6 @@ export const ProductsProvider = ({ children }) => {
 
     const [searchQuery, setSearchQuery] = useState('')
 
-    console.log(searchQuery)
-
     const [disposables, setDisposables] = useState([]);
     const [eLiquid, setELiquid] = useState([]);
     const [accessories, setAccessories] = useState([]);
