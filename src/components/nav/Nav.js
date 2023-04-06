@@ -6,7 +6,7 @@ import { AiOutlineMenu } from 'react-icons/ai'
 import { IoCloseOutline } from 'react-icons/io5'
 
 
-const Nav = ({ handleActivePage, activePage }) => {
+const Nav = ({ handleActivePage, fixed }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const navigate = useNavigate()
     const openMenu = () => {
@@ -16,9 +16,10 @@ const Nav = ({ handleActivePage, activePage }) => {
         setIsMenuOpen(false)
     }
 
+
     return (
-        <div className='header-container'>
-            <h1 onClick={() =>{ navigate('/'); handleActivePage('')}}>VAPEBROS</h1>
+        <div className={fixed ? 'header-fixed' : 'header-container'}>
+            {fixed && <h1 onClick={() => { navigate('/'); handleActivePage('') }}>VAPEBROS</h1>}
             <div className='plus1036-display-none'>    {
                 isMenuOpen ?
                     <IoCloseOutline onClick={closeMenu} className='nav-menu-btn_close' />

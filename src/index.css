@@ -4,20 +4,21 @@
     font-family: sans-serif;
 }
 
-@media (width >=1036px) {
+/* @media (width >=1036px) {
     .plus1036-display-none {
         display: none;
     }
 }
 
 @media (width <=1035px) {
-    .plus1036-display-none {
-        z-index: 2;
-    }
+  
+} */
+.plus1036-display-none {
+    z-index: 2;
 }
 
 .nav-space {
-    height: 60px;
+    height: 50px;
 }
 
 .lazy-blurred-img.blur-up {

@@ -26,6 +26,8 @@ const App = () => {
   const [activePage, setActivePage] = useState('')
   const [legal, setLegal] = useState(true)
   const [nonPermit, setNonPermit] = useState(false)
+  const [fixed, setFixed] = useState(false)
+
 
   const { pathname } = useLocation();
 
@@ -83,16 +85,35 @@ const App = () => {
     setActivePage(page)
 
   }
+
+
+  
+  useEffect(() => {
+    function handleScroll() {
+        if (window.pageYOffset > window.innerHeight * 0.3) {
+            setFixed(true);
+        } else {
+            setFixed(false);
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, []);
+
   return (
     <>
       {!legal &&
         < Permit nonPermit={nonPermit} handleAddCookie={handleAddCookie} />}
-      <Nav handleActivePage={handleActivePage} activeLink={activePage} />
+      <Nav fixed={fixed} handleActivePage={handleActivePage}  />
       {
         <div className='nav-space'></div>
       }
       <Routes>
-        <Route path='/' exact element={<Home />} />
+        <Route path='/' exact element={<Home fixed={fixed} />} />
         <Route path='/wholesale' element={<Wholesale />} />
 
         <Route path='/about' element={<About />} />
