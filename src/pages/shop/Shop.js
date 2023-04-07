@@ -10,10 +10,12 @@ const Shop = ({ category }) => {
     return (
         <div className='shop-container'>
             <Categories category={category} />
-            {
+           <div className='shop-outer-container'>
+           {
                 category === 'disposables' ?
                     <Dispo /> : <Liqu />
             }
+            </div>
         </div>
     )
 }

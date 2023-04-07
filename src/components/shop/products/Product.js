@@ -6,7 +6,9 @@ const Product = ({ product }) => {
     return (
         <div onClick={() => navigate(`/product=${product.name}`)} className='products_product-container'>
             {product.image &&
-                <img src={product.image} className='products_product-img' alt={product.name} />}
+                <div className='products-img-background'>
+                    <img src={product.image} className='products_product-img' alt={product.name} />
+                </div>}
             <p className='products_product-name'>{product.name}</p>
             <p className='products_product-desc'>{product.description}</p>
             <Link to={`/product=${product.name}`} className='products_product-btn'>View</Link>
