@@ -40,7 +40,6 @@ const Home = ({ fixed }) => {
     <div
       className='home-container'>
       <section className='home_section1'>
-        <h1 className='home_header'>VAPEBROS</h1>
         <img className={big ? 'home-img__big' : 'home-img'} src={group} alt='vapebros' />
       </section>
       <section className='home_section2'>

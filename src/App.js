@@ -6,7 +6,6 @@ import Nav from './components/nav/Nav'
 
 import { useProducts } from './contexts/ProductsContext';
 import { BlogsProvider } from './contexts/BlogsContext';
-import SpinnerLoader from './components/spinnerLoader/SpinnerLoader';
 
 
 const Home = lazy(() => import('./pages/home/Home'));
@@ -71,17 +70,14 @@ const App = () => {
     }
     const activeLink = document.getElementById(activePage)
     if (activePage === 'Contact') {
-      activeLink.style.background = 'black'
-      activeLink.style.color = 'white'
+
       return
     }
-    document.getElementById('Contact').style.background = ''
-    document.getElementById('Contact').style.color = ''
     activeLink.style.fontWeight = 'bold'
-
 
     return () => {
       activeLink.style.fontWeight = ''
+
 
 
     };
@@ -101,7 +97,7 @@ const App = () => {
       setFixed(false)
     }
     function handleScroll() {
-      if (window.pageYOffset > window.innerHeight * 0.3) {
+      if (window.pageYOffset > window.innerHeight * 0.24) {
         setFixed(true);
       } else {
         setFixed(false);
@@ -115,12 +111,53 @@ const App = () => {
     };
   }, [pathname]);
 
+  let startY; // will hold the starting Y position of the touch
+
+  function handleTouchStart(event) {
+    // store the starting Y position of the touch
+    startY = event.touches[0].clientY;
+  }
+
+  function handleTouchEnd(event) {
+    const endY = event.changedTouches[0].clientY; // ending Y position of the touch
+
+    // calculate the distance moved
+    const distance = startY - endY;
+
+    // check if the user swiped up or down
+    if (distance > 0) {
+      // user swiped up
+      document.getElementById('navigation').classList.add('nav_scroll');
+    } else {
+      // user swiped down
+      document.getElementById('navigation').classList.remove('nav_scroll');
+    }
+  }
+
+  function handleScroll(event) {
+    // get the direction of the scroll
+    const direction = event.deltaY > 0 ? 'up' : 'down';
+
+    // check if the user scrolled up or down
+    if (direction === 'up') {
+      // user scrolled up
+      document.getElementById('navigation').classList.remove('nav_scroll');
+    } else {
+      // user scrolled down
+      document.getElementById('navigation').classList.add('nav_scroll');
+    }
+  }
+
+  document.addEventListener('touchstart', handleTouchStart);
+  document.addEventListener('touchend', handleTouchEnd);
+  document.addEventListener('wheel', handleScroll);
+
   return (
     <Suspense fallback={<p>loading..</p>}>
       {!legal &&
         <Permit nonPermit={nonPermit} handleAddCookie={handleAddCookie} />}
       <Nav activePage={activePage} fixed={fixed} handleActivePage={handleActivePage} />
-      <div className='nav-space'></div>
+      <div className={pathname === '/' ? "" : "nav-space"}></div>
       <Routes>
         <Route path='' element={<Home fixed={fixed} />} />
         <Route path='/wholesale' element={<Wholesale />} />
@@ -152,7 +189,6 @@ const App = () => {
 
       <Footer />
     </Suspense>
-
 
   )
 }
