@@ -197,7 +197,7 @@
 
     .home_section2 {
         min-height: 160vh;
-        background-color: rgb(255, 255, 68);
+        background-color: rgb(255, 255, 255);
         padding-top: 40vh;
 
     }
@@ -278,7 +278,7 @@
     }
     .home-section3 {
         min-height: 70vh;
-        background-color: rgb(255, 255, 68);
+        background-color: rgb(255, 255, 255);
         box-sizing: border-box;
         padding: 20vh 5vw;
         display: flex;

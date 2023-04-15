@@ -12,7 +12,8 @@ const CustomForm = ({ name, flavors }) => {
             <h1>{name}</h1>
             <div className='form-flavors-view'>
                 {flavors.map((flavor) => (
-                    <div className={`flavor`} style={{ background: flavor }}>
+                    <div className={`flavor`} style={{ backgroundColor: flavor.color }}>
+                        <p>{flavor.name}</p>
                     </div>
                 ))}
             </div>

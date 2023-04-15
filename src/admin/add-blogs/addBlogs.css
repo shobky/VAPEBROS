@@ -8,7 +8,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: -3%;
 }
 
 .add-blogs form {
@@ -49,7 +48,7 @@
 
 }
 
-.add-blog-img {
+.add-blogs-img {
     z-index: 2;
     width: 150px;
     height: 150px;
@@ -67,7 +66,8 @@
     border: 1.5px solid rgba(1, 1, 1, 0.525);
     transition: ease-in-out .2s;
 }
-.add-blog-submit-btn__loading{
+
+.add-blog-submit-btn__loading {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     border: none;
@@ -140,6 +140,7 @@
 .add-blogs-box.box-succ {
     background-color: rgb(12, 215, 63) !important;
 }
+
 .add-blogs-box.box-err {
     background-color: rgb(255, 21, 21) !important;
 }
@@ -174,10 +175,10 @@
 
 
 
-.add-blogs-text-area{
+.add-blogs-text-area {
     resize: none;
     width: 40vw;
     padding: 10px;
     border: 1px solid rgba(41, 41, 41, 0.327);
-    height: 150px;
+    height: 100px;
 }

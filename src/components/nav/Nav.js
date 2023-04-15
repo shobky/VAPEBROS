@@ -4,10 +4,13 @@ import './nav.css'
 
 import { AiOutlineMenu } from 'react-icons/ai'
 import { IoCloseOutline } from 'react-icons/io5'
+import Notification from '../notification/Notification';
 
 
 const Nav = ({ handleActivePage, fixed }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [notification, setNotification] = useState(true)
+
     const navigate = useNavigate()
     const openMenu = () => {
         setIsMenuOpen(true)
@@ -16,9 +19,15 @@ const Nav = ({ handleActivePage, fixed }) => {
         setIsMenuOpen(false)
     }
 
+    const handleSetNotification = () => {
+        setNotification(false)
+    }
+
 
     return (
         <div className={fixed ? 'header-fixed' : 'header-container'}>
+            {notification && <Notification handleSetNotification={handleSetNotification} />}
+            <br />
             {<h1 onClick={() => { navigate('/'); handleActivePage('') }}>VAPEBROS</h1>}
             <div className='plus1036-display-none'>    {
                 isMenuOpen ?

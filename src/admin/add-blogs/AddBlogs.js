@@ -98,7 +98,7 @@ const AddBlogs = () => {
             <form id='add-blog-form' onSubmit={addProduct}>
                 <div className='add-blog-picture'>
                     <input onChange={(e) => handleFileChange(e)} className='add-blogs-file-input' type='file' />
-                    <img className='add-prduct-img' src={image ?? placeHolder} alt="" />
+                    <img className='add-blogs-img' src={image ?? placeHolder} alt="" />
                 </div>
                 <input required ref={titleRef} type='text' placeholder='title' />
                 <input required ref={descRef} type='text' placeholder='description' />

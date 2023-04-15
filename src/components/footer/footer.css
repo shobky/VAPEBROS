@@ -52,7 +52,7 @@
         justify-content: center;
         border: none;
         width: 10vw;
-
+        transition: ease-in-out .2s;
         min-width: 95px;
     }
 
@@ -182,6 +182,7 @@
         justify-content: center;
         border: none;
         width: 25vw;
+        transition: ease-in-out .2s;
     }
 
     .footer-newletter-section button:hover {
@@ -259,5 +260,31 @@
         bottom: 25px;
         color: rgba(237, 237, 237, 0.851);
 
+    }
+}
+
+.footer-btn-sent {
+    background-color: rgb(38, 243, 38) !important;
+    transition: ease-in-out .2s;
+    color: white !important;
+}
+
+.footer-btn-failed {
+    background-color: rgb(255, 28, 28) !important;
+    transition: ease-in-out .2s;
+    color: white !important;
+}
+
+.footer-btn-spinner {
+    animation: footerSpinner .5s infinite linear;
+}
+
+@keyframes footerSpinner {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }

@@ -75,8 +75,10 @@
 .flavor {
     width: 80px;
     height: 80px;
-    background-color: rgb(241, 241, 61);
     transition: ease-in-out .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -132,9 +134,9 @@
 
 @media (width >=626px) {
     .flavor.active {
-        width: 40px;
-        height: 40px;
-        margin: 20px;
+        width: 50px;
+        height: 50px;
+        margin: 15px;
     }
 
     .flavor:hover {
@@ -215,80 +217,21 @@
     font-size: 18px;
 }
 
-.flavor-red {
-    background-color: red;
+.flavor p {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    width: 90%;
+    line-break: anywhere;
+    font-size: calc(.8vw + .8vh);
+    transition: ease-in-out .2s;
 }
+.flavor.active p {
+    color: rgb(0, 0, 0);
+    font-weight: 100;
+    width: 90%;
+    line-break: anywhere;
+    font-size: calc(.6vw + .6vh);
+    transition: ease-in-out .2s;
 
-.flavor-orange {
-    background-color: orange;
-}
 
-.flavor-yellow {
-    background-color: yellow;
-}
-
-.flavor-green {
-    background-color: green;
-}
-
-.flavor-blue {
-    background-color: blue;
-}
-
-.flavor-purple {
-    background-color: purple;
-}
-
-.flavor-pink {
-    background-color: pink;
-}
-
-.flavor-brown {
-    background-color: brown;
-}
-
-.flavor-gray {
-    background-color: gray;
-}
-
-.flavor-black {
-    background-color: black;
-    color: white;
-}
-
-.flavor-light-blue {
-    background-color: lightblue;
-}
-
-.flavor-beige {
-    background-color: beige;
-}
-
-.flavor-navy {
-    background-color: navy;
-    color: white;
-}
-
-.flavor-teal {
-    background-color: teal;
-    color: white;
-}
-
-.flavor-maroon {
-    background-color: maroon;
-    color: white;
-}
-
-.flavor-lavender {
-    background-color: lavender;
-}
-
-.flavor-olive {
-    background-color: olive;
-    color: white;
-}
-
-.flavor-magenta {
-    background-color: magenta;
-    color: white;
 }

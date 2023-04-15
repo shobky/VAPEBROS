@@ -6,6 +6,7 @@ import Nav from './components/nav/Nav'
 
 import { useProducts } from './contexts/ProductsContext';
 import { BlogsProvider } from './contexts/BlogsContext';
+import Dashboard from './admin/dashboard/Dashboard';
 
 
 const Home = lazy(() => import('./pages/home/Home'));
@@ -176,6 +177,7 @@ const App = () => {
           } />
         ))}
 
+        <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/dashboard/add-products' element={<AddProducts />} />
         <Route path='/dashboard/add-blogs' element={<AddBlogs />} />
       </Routes>

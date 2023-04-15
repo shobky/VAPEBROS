@@ -4,15 +4,29 @@
     font-family: sans-serif;
 }
 
-/* @media (width >=1036px) {
-    .plus1036-display-none {
-        display: none;
-    }
+
+.notification-container {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.907);
+    position: absolute;
+    top: 0;
+    height: 25px;
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2000;
+    color: white;
+    padding-left: 5vw;
+    box-sizing: border-box;
+    padding-right: 5vw  ;
+}
+.notif-close-btn{
+    top: 2px;
+    right: 5vw;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-@media (width <=1035px) {
-  
-} */
 .plus1036-display-none {
     z-index: 2;
 }

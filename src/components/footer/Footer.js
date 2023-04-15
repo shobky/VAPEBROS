@@ -1,18 +1,22 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './footer.css'
 import { FiExternalLink } from 'react-icons/fi'
 import emailjs from '@emailjs/browser';
-
+import { ImSpinner8 } from 'react-icons/im'
 const Footer = () => {
-
+    const [mailStatus, setMailStatus] = useState('')
     const emailRef = useRef()
 
-    const handleSubscribe = (e) => {
+    const handleSubscribe = async (e) => {
         e.preventDefault()
+        setMailStatus('loading')
 
         if (!emailRef.current.value) {
-            console.log('no email provided')
+            setMailStatus('failed')
+            setTimeout(() => {
+                setMailStatus('')
+            }, 800);
             return
         }
 
@@ -26,13 +30,19 @@ const Footer = () => {
         };
 
         emailjs.init(userId);
-        emailjs.send(serviceId, templateId, templateParams)
+        await emailjs.send(serviceId, templateId, templateParams)
             .then(function (response) {
-                console.log('SUCCESS!', response.status, response.text);
+                setMailStatus('sent')
+                emailRef.current.value = ''
             }, function (error) {
-                console.log('FAILED...', error);
+                setMailStatus('failed')
             });
+
+        setTimeout(() => {
+            setMailStatus('')
+        }, 800);
     }
+
     return (
         <div className='footer-container'>
 
@@ -70,7 +80,7 @@ const Footer = () => {
                     <p>Join our newsletter to stay up to date with new products.</p>
                     <form onSubmit={handleSubscribe} className='footer-newletter-flex'>
                         <input ref={emailRef} placeholder='Email' />
-                        <button type='submit'>Subscribe</button>
+                        <button className={(mailStatus === '' || mailStatus === 'loading') ? '' : mailStatus === 'sent' ? 'footer-btn-sent' : 'footer-btn-failed'} type='submit'>{mailStatus === '' ? 'subscribe' : mailStatus === 'loading' ? <ImSpinner8 className="footer-btn-spinner" /> : mailStatus === 'sent' ? 'sent' : 'failed'}</button>
                     </form>
                 </div>
             </div>

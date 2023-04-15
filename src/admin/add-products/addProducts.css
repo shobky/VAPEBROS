@@ -8,7 +8,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: -3%;
 }
 
 .add-products form {
@@ -67,7 +66,8 @@
     border: 1.5px solid rgba(1, 1, 1, 0.525);
     transition: ease-in-out .2s;
 }
-.add-product-submit-btn__loading{
+
+.add-product-submit-btn__loading {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     border: none;
@@ -91,7 +91,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
-    width: 82%;
+    width: 73%;
     border-collapse: collapse;
     gap: 5px;
 
@@ -140,6 +140,7 @@
 .add-products-box.box-succ {
     background-color: rgb(12, 215, 63) !important;
 }
+
 .add-products-box.box-err {
     background-color: rgb(255, 21, 21) !important;
 }
