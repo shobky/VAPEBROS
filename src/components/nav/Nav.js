@@ -26,8 +26,13 @@ const Nav = ({ handleActivePage, fixed }) => {
 
     return (
         <div className={fixed ? 'header-fixed' : 'header-container'}>
-            {notification && <Notification handleSetNotification={handleSetNotification} />}
-            <br />
+            {notification &&
+                <>
+                    <Notification handleSetNotification={handleSetNotification} />
+                    <br />
+                </>
+            }
+
             {<h1 onClick={() => { navigate('/'); handleActivePage('') }}>VAPEBROS</h1>}
             <div className='plus1036-display-none'>    {
                 isMenuOpen ?

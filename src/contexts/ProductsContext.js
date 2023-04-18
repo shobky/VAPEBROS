@@ -11,6 +11,8 @@ export const useProducts = () => {
 
 export const ProductsProvider = ({ children }) => {
 
+    const [isUser, setIsUser] = useState(false)
+
     const [searchQuery, setSearchQuery] = useState('')
 
     const [disposables, setDisposables] = useState([]);
@@ -18,6 +20,10 @@ export const ProductsProvider = ({ children }) => {
     const [accessories, setAccessories] = useState([]);
 
     const [allProducts, setAllProdcuts] = useState([])
+
+    const hadnleUser = (user) => {
+        setIsUser(user)
+    }
 
     useEffect(() => {
         setAllProdcuts([...disposables, ...eLiquid, ...accessories])
@@ -80,7 +86,9 @@ export const ProductsProvider = ({ children }) => {
         accessories,
         allProducts,
         hadnleSearchInput,
-        searchQuery
+        searchQuery,
+        hadnleUser,
+        isUser
     }
     return (
         <ProductsContext.Provider value={value}>

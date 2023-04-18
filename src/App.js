@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react'
-import { Route, Routes, useLocation } from 'react-router'
+import { Route, Routes, useLocation, useNavigate } from 'react-router'
 import Cookies from 'js-cookie';
 import Permit from './components/permit/Permit'
 import Nav from './components/nav/Nav'
@@ -26,7 +26,7 @@ const BlogRoutes = lazy(() => import('./components/blog/BlogRoutes'));
 
 const App = () => {
 
-  const { allProducts } = useProducts()
+  const { allProducts, isUser } = useProducts()
 
   const [activePage, setActivePage] = useState('')
   const [legal, setLegal] = useState(true)
@@ -34,6 +34,7 @@ const App = () => {
   const { pathname } = useLocation();
 
   const [fixed, setFixed] = useState(false);
+  const navigate = useNavigate()
 
 
 
@@ -178,8 +179,12 @@ const App = () => {
         ))}
 
         <Route path='/dashboard' element={<Dashboard />} />
-        <Route path='/dashboard/add-products' element={<AddProducts />} />
-        <Route path='/dashboard/add-blogs' element={<AddBlogs />} />
+        {
+          isUser &&
+          <>
+            <Route path='/dashboard/add-products' element={<AddProducts />} />
+            <Route path='/dashboard/add-blogs' element={<AddBlogs />} /></>
+        }
       </Routes>
 
       <BlogsProvider>

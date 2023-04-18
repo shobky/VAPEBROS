@@ -1,4 +1,71 @@
 .dashboard {
     min-height: 100vh;
     padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-with-google {
+    background-color: #487EF5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    gap: 20px;
+    padding: 2px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.login-with-google__ico {
+    background-color: white;
+    height: 100%;
+    width: 50px;
+    border-radius: 5px;
+    padding: 7px;
+    box-sizing: border-box;
+
+}
+
+.dashboard-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: -10vh;
+    margin-bottom: 5vh;
+}
+
+.dashboard-profile img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+
+}
+
+.dashboard-profile p {
+    font-weight: bold;
+}
+
+.dashboard-links {
+    display: flex;
+    gap: 50px;
+}
+
+.dashboard-link {
+    width: 75px;
+    height: 75px;
+    padding: 10px;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
 }
