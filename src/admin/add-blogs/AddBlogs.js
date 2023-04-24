@@ -1,4 +1,4 @@
-import { addDoc, collection } from 'firebase/firestore'
+import { addDoc, collection, doc, setDoc } from 'firebase/firestore'
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage'
 import React, { useRef, useState } from 'react'
 import { db, storage } from '../../firebase/config'
@@ -61,13 +61,12 @@ const AddBlogs = () => {
             return
         }
         try {
-            const docRef = await addDoc(collection(db, 'blogs'), {
+            await setDoc(doc(db, 'blogs', titleRef.current.value), {
                 title: titleRef.current.value,
                 description: descRef.current.value,
                 image: image,
                 article: articleRef.current.value,
-            })
-            console.log(docRef.id)
+            });
             setUploading(false)
             setImgError(false)
             setUploaded(true)

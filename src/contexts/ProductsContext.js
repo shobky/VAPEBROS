@@ -21,6 +21,7 @@ export const ProductsProvider = ({ children }) => {
 
     const [allProducts, setAllProdcuts] = useState([])
 
+
     const hadnleUser = (user) => {
         setIsUser(user)
     }
@@ -64,21 +65,10 @@ export const ProductsProvider = ({ children }) => {
     };
 
     useEffect(() => {
-        // const page = window.location.pathname.split('/')[1];
-        // console.log(page)
-        // if (page === 'disposables') {
-        // console.log('d')
+   
         fetchDisposables()
-        // } else if (page === 'e-Liquid') {
-        // console.log('ee')
         fetchLiquids()
-        // } else if (page === 'accessories') {
         fetchAccessories()
-        // console.log('a')
-
-        // } else {
-        // return
-        // }
     }, [])
     const value = {
         disposables,

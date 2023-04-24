@@ -6,7 +6,7 @@ import { useBlogs } from '../../contexts/BlogsContext'
 import SpinnerLoader from '../spinnerLoader/SpinnerLoader'
 
 const ReadBlog = ({ blog }) => {
-    const { laodingBlogs, bloga } = useBlogs()
+    const { laodingBlogs } = useBlogs()
 
     return (
         <>

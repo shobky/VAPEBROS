@@ -24,14 +24,61 @@ const Nav = ({ handleActivePage, fixed }) => {
     }
 
 
+
+
+    let startY; // will hold the starting Y position of the touch
+
+    function handleTouchStart(event) {
+        // store the starting Y position of the touch
+        startY = event.touches[0].clientY;
+    }
+
+    function handleTouchEnd(event) {
+        const endY = event.changedTouches[0].clientY; // ending Y position of the touch
+
+        // calculate the distance moved
+        const distance = startY - endY;
+
+        // check if the user swiped up or down
+        if (distance > 0) {
+            // user swiped up
+            document.getElementById('navigation').classList.add('nav_scroll');
+        } else {
+            // user swiped down
+            document.getElementById('navigation').classList.remove('nav_scroll');
+
+        }
+    }
+
+    function handleScroll(event) {
+        // get the direction of the scroll
+        const direction = event.deltaY > 0 ? 'up' : 'down';
+
+        // check if the user scrolled up or down
+        if (direction === 'up') {
+            // user scrolled up
+            document.getElementById('navigation').classList.remove('nav_scroll');
+
+        } else {
+            // user scrolled down
+            document.getElementById('navigation').classList.add('nav_scroll');
+
+        }
+    }
+
+    document.addEventListener('touchstart', handleTouchStart);
+    document.addEventListener('touchend', handleTouchEnd);
+    document.addEventListener('wheel', handleScroll);
+
+
     return (
         <div className={fixed ? 'header-fixed' : 'header-container'}>
-            {notification &&
+            {/* {notification &&
                 <>
                     <Notification handleSetNotification={handleSetNotification} />
                     <br />
                 </>
-            }
+            } */}
 
             {<h1 onClick={() => { navigate('/'); handleActivePage('') }}>VAPEBROS</h1>}
             <div className='plus1036-display-none'>    {

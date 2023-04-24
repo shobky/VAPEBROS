@@ -14,10 +14,32 @@ const Wholesale = () => {
             <section className='section2'>
                 <h1 className='wholesale-head'>Our Partners</h1>
                 <div className='partners-container'>
-                    <p>ZENO</p>
-                    <p>QUAKI</p>
-                    <p>XIAMI</p>
-                    <p>CLOIE</p>
+                    <div className='partners-partner-container'>
+                        <h2>Malaysia</h2>
+                        <br />
+                        <p>
+                            Suite 11.01B, Level 11,
+                            The Gardens South Tower,
+                            Mid Valley City, Lingkaran Syed Putra,
+                            59200 Kuala Lumpur
+                        </p>
+                        <div className='partners-partner-contact'>
+                            <a target='blank' href='https://www.broasia.com '> www.broasia.com </a>
+                            <p><a target='blank' href="tel:+60178188651">017-8188651</a></p>
+                            <p><a target='blank' href="mailto:official@broasia.com">official@broasia.com</a></p>
+                        </div>
+                    </div>
+                    <div className='partners-partner-container'>
+                        <h2>Macedonia</h2>
+                        <br />
+                        <p>Tetovo-North Macedonia</p>
+                        <div className='partners-partner-contact'>
+                            <a target='blank' href='https://www.trokaderofm.com'>www.trokaderofm.com</a>
+                            <p><a target='blank' href="tel:+38944355955">+38944355955</a></p>
+                            <p><a target='blank' href="mailto:info@trokaderofm.com">info@trokaderofm.com</a></p>
+                        </div>
+                    </div>
+
                 </div>
             </section>
             <section className='sectoin3'>

@@ -1,4 +1,4 @@
-import { addDoc, collection } from 'firebase/firestore'
+import { addDoc, collection, doc, setDoc } from 'firebase/firestore'
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage'
 import React, { useRef, useState } from 'react'
 import { db, storage } from '../../firebase/config'
@@ -6,6 +6,7 @@ import placeHolder from '../../assets/imgPlaceholder.jpg'
 import './addProducts.css'
 import { ImSpinner8 } from 'react-icons/im'
 import { RiCheckboxBlankCircleFill } from 'react-icons/ri'
+import Product from '../../components/shop/products/Product'
 // import image from '../../assets/about1.jpg'
 
 const AddProducts = () => {
@@ -62,14 +63,13 @@ const AddProducts = () => {
             return
         }
         try {
-            const docRef = await addDoc(collection(db, category), {
+            await setDoc(doc(db, category, nameRef.current.value), {
                 category,
                 name: nameRef.current.value,
                 description: descRef.current.value,
                 image: image,
                 puffs: puffRef.current.value ? puffRef.current.value : 'N/A',
-            })
-            console.log(docRef.id)
+            });
             setUploading(false)
             setImgError(false)
             setUploaded(true)

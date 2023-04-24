@@ -1,6 +1,7 @@
 @media (width >=811px) {
     .footer-container {
-        background-color: rgb(11, 11, 11);
+        background-color: rgb(20, 20, 20);
+
         color: white;
         z-index: 4;
         height: 100%;
@@ -130,7 +131,8 @@
 
 @media (width <=810px) {
     .footer-container {
-        background-color: rgb(11, 11, 11);
+        background-color: rgb(20, 20, 20);
+
         color: white;
         z-index: 4;
         height: 100vh;

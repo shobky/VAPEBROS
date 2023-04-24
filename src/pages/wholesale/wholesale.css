@@ -33,17 +33,43 @@
 }
 
 .partners-container {
-    gap: 10vh 10vw;
+    gap: 5px;
     margin-top: 15vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 35vh;
 }
 
-.partners-container p {
-    font-weight: bold;
-    border: 1px solid rgba(0, 0, 0, 0.221);
-    padding: 15px;
+.partners-partner-container {
+    width: 22.5vw;
+    max-width: 250px;
+    min-width: 175px;
+    border: 1px solid rgba(0, 0, 0, 0.154);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 220px;
+    align-items: center;
+    position: relative;
 }
 
+.partners-partner-contact {
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+}
+
+.partners-partner-contact a {
+    color: black;
+
+}
+.partners-partner-contact a:hover {
+    opacity: .7;
+    margin: 5px 0;
+}
 .wholesale-input_textarea {
     resize: none;
     height: 150px;
@@ -130,6 +156,7 @@
         padding: 5px;
 
     }
+
     .wholesale .sectoin3 {
         min-height: 150vh;
         display: flex;
@@ -144,6 +171,7 @@
 
 @media (width <=742px) {
 
+
     .wholesale .sectoin3 {
         min-height: 150vh;
         display: flex;
@@ -152,14 +180,30 @@
         position: relative;
         top: 30vh;
         margin-bottom: 10vh;
-        
+
     }
+
+ 
     .partners-container {
-        gap: 50%;
+        gap: 15px;
+        margin-top: 15vh;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        display: grid;
-        grid-template-columns: auto auto;
+        width: 100%;
+        margin-bottom: 15vh !important;
+    }
+    .partners-partner-container {
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.154);
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: fit-content;
+        position: relative;
     }
 
     .whlesale-article {
@@ -189,7 +233,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 50px 5vw 10vh 5vw;
+        margin: 50px 5vw 30vh 5vw;
     }
 
     .wholesale form {

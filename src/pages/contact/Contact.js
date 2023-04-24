@@ -13,27 +13,26 @@ const Contact = () => {
                 <div className='contact-info'>
                     <h2>Contact Information</h2>
                     <p className='contact-info-subheader'>Fill out the form and our team will get back to you in 24 hours.</p>
-                   <div className='contact-info-inner'>
-                   <div className='contact-info-flex'>
-                        <BsFillTelephoneFill className='contact-ico'/>
-                        <p>+xx (xxx) xxx xxxx</p>
-                    </div>
-                    <div className='contact-info-flex'>
-                        <RiWhatsappFill className='contact-ico'/>
-                        <p>+xx (xxx) xxx xxxx</p>
-                    </div>
-                    <div className='contact-info-flex'>
-                       <MdEmail className='contact-ico'/>
-                        <p>contact@vapebroos.com</p>
-                    </div>
-                    <div className='contact-work-timings'>
-                        <p className='contact-info-field'><BiTimeFive className='contact-ico'/>Work timing</p>
-                      <div className='contact-work-timings'>
-                      <p>MON-FRI 9AM-9PM</p>
-                        <p>SAT-SUN Closed</p>
+                    <div className='contact-info-inner'>
+                        <div className='contact-info-flex'>
+                            <BsFillTelephoneFill className='contact-ico' />
+                            <p>+xx (xxx) xxx xxxx</p>
+                        </div>
+                        <div className='contact-info-flex'>
+                            <RiWhatsappFill className='contact-ico' />
+                            <p>+xx (xxx) xxx xxxx</p>
+                        </div>
+                        <div className='contact-info-flex'>
+                            <MdEmail className='contact-ico' />
+                            <a style={{ color: "inherit" }} href='mailto:Info@Brovapes.com'>Info@Brovapes.com </a>
+                        </div>
+                        <div className='contact-work-timings'>
+                            <p className='contact-info-field'><BiTimeFive className='contact-ico' />Work timing</p>
+                            <div className='contact-work-timings'>
+                                <p>MON-FRI 8 AM-4:30 PM</p>
+                            </div>
                         </div>
                     </div>
-                   </div>
                 </div>
                 <div>
                     <form className='contact-form'>
@@ -59,7 +58,7 @@ const Contact = () => {
                         </div>
                         <label>Message</label>
                         <textarea className='contact-message' />
-                        <button className='contact-form-btn'>Send Now <BsArrowUpRight/></button>
+                        <button className='contact-form-btn'>Send Now <BsArrowUpRight /></button>
                     </form>
                 </div>
 

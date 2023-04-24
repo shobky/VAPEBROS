@@ -9,12 +9,16 @@
         display: none;
     }
 
+    .cat-container_scroll{
+        top: 111px !important;
+        transition: ease-in-out .4s;
+    }
     .cat-container {
         width: 100%;
         position: fixed;
         left: 0vw;
         height: 40px;
-        top: 57px;
+        top: 55px;
         background-color: white;
         box-sizing: border-box;
         display: flex;
@@ -23,6 +27,7 @@
         padding: 0 5vw;
         border-bottom: .5px solid rgba(0, 0, 0, 0.114);
         border-top: .5px solid rgba(0, 0, 0, 0.114);
+        transition: ease-in-out .4s;
 
     }
 

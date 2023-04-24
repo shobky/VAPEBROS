@@ -171,6 +171,25 @@
         margin: 7.5px;
     }
 
+
+    .flavor p {
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        width: 90%;
+        line-break: anywhere;
+        font-size: 11px !important;
+        transition: ease-in-out .2s;
+    }
+
+    .flavor.active p {
+        color: rgb(0, 0, 0);
+        font-weight: 100;
+        width: 90%;
+        line-break: anywhere;
+        font-size: 10px !important;
+        transition: ease-in-out .2s;
+    }
+
 }
 
 
@@ -222,16 +241,15 @@
     font-weight: bold;
     width: 90%;
     line-break: anywhere;
-    font-size: calc(.8vw + .8vh);
+    font-size: 17px;
     transition: ease-in-out .2s;
 }
+
 .flavor.active p {
     color: rgb(0, 0, 0);
     font-weight: 100;
     width: 90%;
     line-break: anywhere;
-    font-size: calc(.6vw + .6vh);
+    font-size: 15px;
     transition: ease-in-out .2s;
-
-
 }

@@ -36,6 +36,11 @@ const Home = ({ fixed }) => {
   }, []);
 
 
+
+
+
+
+
   return (
     <div
       className='home-container'>

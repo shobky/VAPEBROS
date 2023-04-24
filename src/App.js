@@ -7,6 +7,7 @@ import Nav from './components/nav/Nav'
 import { useProducts } from './contexts/ProductsContext';
 import { BlogsProvider } from './contexts/BlogsContext';
 import Dashboard from './admin/dashboard/Dashboard';
+import DeleteData from './admin/delete/DeleteData';
 
 
 const Home = lazy(() => import('./pages/home/Home'));
@@ -34,12 +35,13 @@ const App = () => {
   const { pathname } = useLocation();
 
   const [fixed, setFixed] = useState(false);
-  const navigate = useNavigate()
-
 
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (pathname !== '/') {
+      setFixed(true)
+    }
   }, [pathname]);
 
   const handleAddCookie = (value) => {
@@ -113,46 +115,6 @@ const App = () => {
     };
   }, [pathname]);
 
-  let startY; // will hold the starting Y position of the touch
-
-  function handleTouchStart(event) {
-    // store the starting Y position of the touch
-    startY = event.touches[0].clientY;
-  }
-
-  function handleTouchEnd(event) {
-    const endY = event.changedTouches[0].clientY; // ending Y position of the touch
-
-    // calculate the distance moved
-    const distance = startY - endY;
-
-    // check if the user swiped up or down
-    if (distance > 0) {
-      // user swiped up
-      document.getElementById('navigation').classList.add('nav_scroll');
-    } else {
-      // user swiped down
-      document.getElementById('navigation').classList.remove('nav_scroll');
-    }
-  }
-
-  function handleScroll(event) {
-    // get the direction of the scroll
-    const direction = event.deltaY > 0 ? 'up' : 'down';
-
-    // check if the user scrolled up or down
-    if (direction === 'up') {
-      // user scrolled up
-      document.getElementById('navigation').classList.remove('nav_scroll');
-    } else {
-      // user scrolled down
-      document.getElementById('navigation').classList.add('nav_scroll');
-    }
-  }
-
-  document.addEventListener('touchstart', handleTouchStart);
-  document.addEventListener('touchend', handleTouchEnd);
-  document.addEventListener('wheel', handleScroll);
 
   return (
     <Suspense fallback={<p>loading..</p>}>
@@ -183,7 +145,19 @@ const App = () => {
           isUser &&
           <>
             <Route path='/dashboard/add-products' element={<AddProducts />} />
-            <Route path='/dashboard/add-blogs' element={<AddBlogs />} /></>
+            <Route path='/dashboard/add-blogs' element={<AddBlogs />} />
+            <Route path='/dashboard/delete-product' element={
+              <BlogsProvider>
+                <DeleteData data={'product'} />
+              </BlogsProvider>
+            } />
+            <Route path='/dashboard/delete-blog' element={
+              <BlogsProvider>
+                <DeleteData data={'blog'} />
+              </BlogsProvider>
+            } />
+
+          </>
         }
       </Routes>
 

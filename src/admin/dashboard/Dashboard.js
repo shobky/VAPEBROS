@@ -52,6 +52,8 @@ const Dashboard = () => {
                         <div className='dashboard-links'>
                             <Link className='dashboard-link' to='/dashboard/add-products'>Add Products</Link>
                             <Link className='dashboard-link' to='/dashboard/add-blogs'>Add Blogs</Link>
+                            <Link className='dashboard-link' to='/dashboard/delete-blog'>delete Blogs</Link>
+                            <Link className='dashboard-link' to='/dashboard/delete-product'>delete products</Link>
 
                         </div>
                     </div>

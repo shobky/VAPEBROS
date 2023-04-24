@@ -10,7 +10,7 @@ import { useProducts } from '../../../contexts/ProductsContext';
 const Categories = ({ category }) => {
   const [activeFilters, setActiveFilters] = useState([]);
   const [filtersOpen, setFiltersOpen] = useState(false)
-  const { hadnleSearchInput,searchQuery } = useProducts()
+  const { hadnleSearchInput, searchQuery } = useProducts()
 
   const handleFilterSelect = () => {
 
@@ -34,9 +34,58 @@ const Categories = ({ category }) => {
 
 
 
+
+
+
+  let startY; // will hold the starting Y position of the touch
+
+  function handleTouchStart(event) {
+    // store the starting Y position of the touch
+    startY = event.touches[0].clientY;
+  }
+
+  function handleTouchEnd(event) {
+    const endY = event.changedTouches[0].clientY; // ending Y position of the touch
+
+    // calculate the distance moved
+    const distance = startY - endY;
+
+    // check if the user swiped up or down
+    if (distance > 0) {
+      // user swiped up
+      document.getElementById('cateogry-container-id').classList.add('cat-container_scroll');
+    } else {
+      // user swiped down
+      document.getElementById('cateogry-container-id').classList.remove('cat-container_scroll');
+
+    }
+  }
+
+  function handleScroll(event) {
+    // get the direction of the scroll
+    const direction = event.deltaY > 0 ? 'up' : 'down';
+
+    // check if the user scrolled up or down
+    if (direction === 'up') {
+      // user scrolled up
+      document.getElementById('cateogry-container-id').classList.remove('cat-container_scroll');
+
+    } else {
+      // user scrolled down
+      document.getElementById('cateogry-container-id').classList.add('cat-container_scroll');
+
+    }
+  }
+
+
+  // document.addEventListener('touchstart', handleTouchStart);
+  // document.addEventListener('touchend', handleTouchEnd);
+  // document.addEventListener('wheel', handleScroll);
+
+
   return (
     <div className='category'>
-      <div className='cat-container'>
+      <div id="cateogry-container-id" className='cat-container'>
         <div className='cat-mobile-header'>
           <p className='filters-flex' onClick={handleFilterSelect}> <GiSettingsKnobs className='cat-filter-ico' />Filter</p>
           <input value={searchQuery ?? ""} onChange={(e) => hadnleSearchInput(e.target.value)} className='cat-search-input' placeholder={`Search ${category}...  `} />

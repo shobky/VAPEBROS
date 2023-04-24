@@ -1,0 +1,15 @@
+.dashboard-product-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20vh 5vw;
+    gap: 50px;
+    justify-content: center;
+}
+
+.dashboard-blogs-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20vh 5vw;
+    gap: 50px;
+    justify-content: center;
+}
