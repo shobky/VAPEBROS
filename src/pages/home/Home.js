@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
+import './home.css'
 import group from '../../assets/pngs/group-ae.png'
 import vapes from '../../assets/pngs/vape-ae.png'
-import './home.css'
 const Home = ({ fixed }) => {
   const [big, setBig] = useState(false)
 
@@ -45,8 +45,9 @@ const Home = ({ fixed }) => {
     <div
       className='home-container'>
       <section className='home_section1'>
-        <img className={big ? 'home-img__big' : 'home-img'} src={group} alt='vapebros' />
+        <img className={big ? 'home-img__big ': 'home-img'} src={group} alt='vapebros' />
       </section>
+
       <section className='home_section2'>
         <div className='home_s2-txt-container'>
           <h2 className='home-s2-text'>Disposables,<div className='s2-text-border'></div></h2>

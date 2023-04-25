@@ -90,7 +90,7 @@
     }
 
     .contact-form-btn {
-        margin: 40px 0% 0 70%;
+        margin: 40px -8.5% 0 70%;
         font-size: 16px;
         font-weight: bold;
         height: 50px;
@@ -162,8 +162,10 @@
     }
 
     .contact-work-timings {
-        margin-left: 38px;
         margin-top: 10px;
+    }
+    .contact-work-timings-inner p {
+        margin-left: 2px;
     }
 
 

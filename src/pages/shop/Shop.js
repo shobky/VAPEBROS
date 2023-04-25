@@ -9,7 +9,6 @@ const Shop = ({ category }) => {
     const { products } = useProducts()
     return (
         <div className='shop-container'>
-            <Categories category={category} />
            <div className='shop-outer-container'>
            {
                 category === 'disposables' ?

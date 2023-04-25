@@ -12,13 +12,15 @@ export const useBlogs = () => {
 
 export const BlogsProvider = ({ children }) => {
 
+   
     const blogq = collection(db, `blogs`)
     const [blogsData, laodingBlogs] = useCollectionData(blogq)
 
 
     const value = {
         blogsData,
-        laodingBlogs
+        laodingBlogs,
+
     }
     return (
         <BlogsContext.Provider value={value}>

@@ -48,20 +48,19 @@
     min-width: 175px;
     border: 1px solid rgba(0, 0, 0, 0.154);
     padding: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    min-height: 220px;
-    align-items: center;
+    min-height: 250px;
     position: relative;
+    display: grid;
+    text-align: center;
+    grid-template-rows: 50px 110px 90px 50px;
 }
 
 .partners-partner-contact {
-    position: absolute;
-    bottom: 30px;
     text-align: center;
+    margin-bottom: 10%;
 }
-
+.partners-logo{
+}
 .partners-partner-contact a {
     color: black;
 
@@ -198,10 +197,9 @@
         width: 100%;
         border: 1px solid rgba(0, 0, 0, 0.154);
         padding: 25px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+        display: grid;
+        text-align: center;
+        grid-template-rows: 50px fit-content 90px 50px;
         height: fit-content;
         position: relative;
     }

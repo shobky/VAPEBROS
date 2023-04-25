@@ -17,7 +17,7 @@ const Permit = ({ handleAddCookie, nonPermit }) => {
         <h1>VAPEBROS</h1>
         {nonPermit ? (
           <p className='nopermit-error'>
-            You must be 18 or older to access VABESTORE.
+            You must be 18 or older to access BROVAPE.
           </p>
         ) : (
           <>

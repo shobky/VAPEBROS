@@ -3,7 +3,7 @@
         background-color: rgb(20, 20, 20);
 
         color: white;
-        z-index: 4;
+        z-index: 11;
         height: 100%;
         position: relative;
     }
@@ -74,16 +74,26 @@
     .footer-links {
         display: flex;
         gap: 100px;
-        align-items: flex-end;
+        align-items: flex-start;
         margin-top: 50px;
 
     }
 
-    .footer-links-inner,
-    .footer-links-ext {
+    .footer-links-inner {
         display: flex;
         flex-direction: column;
         gap: 15px;
+    }
+    .footer-links-ext{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    .footer-sochial-links{
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
     }
 
     .footer-link {

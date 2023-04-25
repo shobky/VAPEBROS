@@ -36,6 +36,13 @@ const App = () => {
 
   const [fixed, setFixed] = useState(false);
 
+  const [searchQ, setSearchQ] = useState('')
+
+  const handleBlogSearch = (q) => {
+    setSearchQ(q)
+  }
+
+
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -120,7 +127,12 @@ const App = () => {
     <Suspense fallback={<p>loading..</p>}>
       {!legal &&
         <Permit nonPermit={nonPermit} handleAddCookie={handleAddCookie} />}
-      <Nav activePage={activePage} fixed={fixed} handleActivePage={handleActivePage} />
+      <Nav
+        activePage={activePage}
+        fixed={fixed}
+        handleActivePage={handleActivePage}
+        handleBlogSearch={handleBlogSearch}
+        searchQ={searchQ} />
       <div className={pathname === '/' ? "" : "nav-space"}></div>
       <Routes>
         <Route path='' element={<Home fixed={fixed} />} />
@@ -163,7 +175,9 @@ const App = () => {
 
       <BlogsProvider>
         <Routes>
-          <Route path='/blog' element={<Blogs />} />
+          <Route path='/blog' element={<Blogs
+            handleBlogSearch={handleBlogSearch}
+            searchQ={searchQ} />} />
         </Routes>
         <BlogRoutes />
       </BlogsProvider>

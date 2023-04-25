@@ -28,7 +28,7 @@ const Contact = () => {
                         </div>
                         <div className='contact-work-timings'>
                             <p className='contact-info-field'><BiTimeFive className='contact-ico' />Work timing</p>
-                            <div className='contact-work-timings'>
+                            <div className='contact-work-timings-inner'>
                                 <p>MON-FRI 8 AM-4:30 PM</p>
                             </div>
                         </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import CountrySelect from './CountrySelect'
 import './wholesale.css'
+import macdo from '../../assets/logo_dark_t.png'
 const Wholesale = () => {
     return (
         <div className='wholesale'>
@@ -16,7 +17,6 @@ const Wholesale = () => {
                 <div className='partners-container'>
                     <div className='partners-partner-container'>
                         <h2>Malaysia</h2>
-                        <br />
                         <p>
                             Suite 11.01B, Level 11,
                             The Gardens South Tower,
@@ -28,16 +28,17 @@ const Wholesale = () => {
                             <p><a target='blank' href="tel:+60178188651">017-8188651</a></p>
                             <p><a target='blank' href="mailto:official@broasia.com">official@broasia.com</a></p>
                         </div>
+                        <img className='partners-logo' alt='logo' src={macdo}/>
                     </div>
                     <div className='partners-partner-container'>
                         <h2>Macedonia</h2>
-                        <br />
                         <p>Tetovo-North Macedonia</p>
                         <div className='partners-partner-contact'>
                             <a target='blank' href='https://www.trokaderofm.com'>www.trokaderofm.com</a>
                             <p><a target='blank' href="tel:+38944355955">+38944355955</a></p>
                             <p><a target='blank' href="mailto:info@trokaderofm.com">info@trokaderofm.com</a></p>
                         </div>
+                        <img className='partners-logo' alt='logo' src={macdo}/>
                     </div>
 
                 </div>
