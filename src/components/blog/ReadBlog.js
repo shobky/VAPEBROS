@@ -24,10 +24,10 @@ const ReadBlog = ({ blog }) => {
                     <article>
                         {blog.article}
                     </article>
-                    <div className='read-blog-nav-links'>
+                    {/* <div className='read-blog-nav-links'>
                         <Link className='read-blog-link back' to='/blog=blogname'> <IoIosArrowBack className='read-blog-link-ico' />Back</Link>
                         <Link className='read-blog-link next' to='/blog=blogname'>Next<IoIosArrowForward className='read-blog-link-ico' /></Link>
-                    </div>
+                    </div> */}
                 </div>
             }</>
     )
