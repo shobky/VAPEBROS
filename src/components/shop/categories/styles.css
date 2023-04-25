@@ -1,4 +1,7 @@
 @media (width >=591px) {
+    .mobile-cat{
+        display: none;
+    }
     .filter_active-header {
         display: none;
     }
@@ -94,6 +97,9 @@
 }
 
 @media (width <=590px) {
+    .pc-cat{
+        display: none;
+    }
 
     .cat-container {
         width: 100%;

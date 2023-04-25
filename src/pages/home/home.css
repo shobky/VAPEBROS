@@ -7,7 +7,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: rgb(189, 187, 224);
+        background-color: rgb(20, 20, 20);
         padding-top: 40px;
         box-sizing: border-box;
     }
@@ -38,7 +38,7 @@
 
     .home_section2 {
         min-height: 110vh;
-        background-color: rgb(255, 255, 68);
+        background-color: rgb(255, 255, 255);
         padding-top: 40vh;
         box-sizing: border-box;
     }
@@ -117,7 +117,7 @@
 
     .home-section3 {
         min-height: 70vh;
-        background-color: rgb(255, 255, 68);
+        background-color: rgb(255, 255, 255);
         box-sizing: border-box;
         padding: 5vh 5vw;
         display: flex;

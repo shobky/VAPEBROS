@@ -15,7 +15,6 @@ const Blogs = ({ handleBlogSearch, searchQ }) => {
 
       <div className='blogs-container'>
         <div className='blogs-header-contaienr'>
-          <h1 className='blogs-header'>Blogs</h1>
           <input onChange={(e) => handleBlogSearch(e.target.value)} className='blogs-search-for-mobile' placeholder='search...' />
         </div>
         <div className='blogs-inner-container'>

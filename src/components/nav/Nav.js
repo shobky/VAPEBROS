@@ -109,12 +109,14 @@ const Nav = ({ handleActivePage, fixed, handleBlogSearch }) => {
                     <Link id='Newsletter' to='/newsLetter' className='nav-link' onClick={() => { handleActivePage('Newsletter'); setIsMenuOpen(false); }}>Newsletter</Link>
                     <Link id='Contact' to='/contact' className='nav-link-special' onClick={() => { handleActivePage('Contact'); setIsMenuOpen(false); }}>Contact</Link>
                 </div>
-                {
+               <div className='pc-cat'>
+               {
                     (pathname === '/disposables' || pathname === '/e-Liquid' || pathname === '/accessories') ?
                         <Categories category={pathname} />
                         : pathname === '/blog' ?
                             < input onChange={(e) => handleBlogSearch(e.target.value)} className='blogs-search' placeholder='search...' /> : ""
                 }
+               </div>
             </nav>
 
         </div>
