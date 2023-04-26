@@ -49,7 +49,10 @@ const Home = ({ fixed }) => {
       <h1 className='hero-txt'>Lorem ipsum dolor sit amet.</h1>
         <button>SHOP</button>
       </div>
-        <img className={big ? 'home-img__big ': 'home-img'} src={group} alt='vapebros' />
+      <div className='img-container'>
+      <img className={big ? 'home-img__big ': 'home-img'} src={group} alt='vapebros' />
+
+      </div>
       </section>
 
       <section className='home_section2'>
